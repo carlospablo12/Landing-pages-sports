@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: border-box;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+/*HEADER DA PÁGINA*/
+.imgLogo {
+  width: 180px;
+}
+.header {
+  /* width: 100%; */
+  min-height: 40px;
+  background-color: #292929;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 25px;
+  gap: 8px 15px;
+}
+/*btn header*/
+.headerbtnGroup {
+  display: flex;
+  gap: 15px;
+  /* justify-content: center; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navBtn {
+  font-size: 16px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 6px;
+}
+.navBtn:hover {
+  border-bottom: solid black 2px;
+  transition-delay: 0.5s;
+}
+/*TÍTULO*/
+.sectionTitle {
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.sectionDescrpition {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+/*CORPO DA PÁGINA*/
+.gridContainer {
+  flex: 1 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "main-content extraContent";
+  padding: 20px;
+}
+.main-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* gap: 10px; */
+  grid-area: main-content;
+  gap: 5px;
+}
+.categoryCard {
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.5s;
+  height: 310px;
+  width: 300px;
+  border-radius: 10px;
+}
+.categoryCard:hover {
+  border-color: black;
+}
+.mainCarImg {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+}
+.mainCategoryCardTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding: 6px;
+}
+.mainCategoryCardDescription {
+  font-size: 18px;
+  padding: 6px;
+}
+/*Extra*/
+.extraContent {
+  background-color: #383838;
+  padding: 10px;
+  grid-area: extraContent;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.extraCardImg {
+  width: 100%;
+
+  border-radius: 10px;
+}
+.extraCategoryTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  padding: 10px 0px;
+}
+.categoryExtra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.categoryExtra:hover {
+  border-color: gainsboro;
+}
+/*FOOTER*/
+.footer {
+  background-color: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: gainsboro;
+}
+a:hover {
+  color: red;
+}
+@media (max-width: 461px) {
+  .header {
+    justify-content: center;
+  }
+  .sectionTitle {
+    text-align: center;
+  }
+  .sectionDescrpition {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .a {
+    padding-top: 10px;
+  }
+}
+@media (max-width: 630px) {
+  .gridContainer {
+    grid-template-areas:
+      "main-content"
+      "extraContent";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  a {
+    font-size: 20px;
+  }
+}
